@@ -5,9 +5,12 @@ import { classNames } from "shared/lib/classNames/classNames";
 import { AppRouter } from "./providers/router";
 import { Navbar } from "widgets/Navbar";
 import { Sidebar } from "widgets/Sidebar";
+import { Suspense } from "react";
+import { LangSwitcher } from "widgets/LangSwitcher";
 
 export default function App() {
   const { theme } = useTheme();
+
   return (
     <div
       className={classNames("app", { hovered: true, selected: false }, [
@@ -16,11 +19,13 @@ export default function App() {
         "cls3",
       ])}
     >
-      <Navbar />
-      <div className="content-page">
-        <Sidebar />
-        <AppRouter />
-      </div>
+      <Suspense fallback="">
+        <Navbar />
+        <div className="content-page">
+          <Sidebar />
+          <AppRouter />
+        </div>
+      </Suspense>
     </div>
   );
 }
