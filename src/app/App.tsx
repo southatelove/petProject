@@ -6,7 +6,7 @@ import { AppRouter } from "./providers/router";
 import { Navbar } from "widgets/Navbar";
 
 export default function App() {
-  const { theme, toggleTheme } = useTheme();
+  const { theme } = useTheme();
   return (
     <div
       className={classNames("app", { hovered: true, selected: false }, [
@@ -15,7 +15,6 @@ export default function App() {
         "cls3",
       ])}
     >
-      <button onClick={toggleTheme}>toggle</button>
       <Navbar />
       <AppRouter />
     </div>
