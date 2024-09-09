@@ -2,6 +2,7 @@ import HTMLWebpackPlugin from "html-webpack-plugin";
 import webpack from "webpack";
 import { BuildOptions } from "./config";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
+import { BundleAnalyzerPlugin } from "webpack-bundle-analyzer";
 
 export function buildPlugins({
   paths,
@@ -20,5 +21,8 @@ export function buildPlugins({
     }),
     // для того чтобы уйти от ререндера при изменений стилей и прочего
     new webpack.HotModuleReplacementPlugin(),
+    new BundleAnalyzerPlugin({
+      openAnalyzer: false,
+    }),
   ];
 }
