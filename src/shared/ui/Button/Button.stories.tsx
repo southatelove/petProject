@@ -1,36 +1,39 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import { fn } from '@storybook/test';
+import type { Meta, StoryObj } from "@storybook/react";
+import { fn } from "@storybook/test";
 
-import {Button} from "./Button"
-
+import { Button, ThemeButton } from "./Button";
 
 const meta = {
-  title: 'shared/Button',
+  title: "shared/Button",
   component: Button,
   parameters: {
-
-    layout: 'centered',
+    layout: "centered",
   },
 
-  tags: ['autodocs'],
-  
+  tags: ["autodocs"],
+
   args: { onClick: fn() },
 } satisfies Meta<typeof Button>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-// More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 export const Primary: Story = {
   args: {
-    children:"text"
-  }
-};
-
-export const Secondary: Story = {
-  args: {
-    children: "text"
+    children: "text",
   },
 };
 
+export const Clear: Story = {
+  args: {
+    children: "text",
+    theme: ThemeButton.CLEAR,
+  },
+};
 
+export const Outline: Story = {
+  args: {
+    children: "text",
+    theme: ThemeButton.OUTLINE,
+  },
+};
