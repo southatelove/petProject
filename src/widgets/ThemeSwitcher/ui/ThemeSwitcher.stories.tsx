@@ -1,43 +1,30 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
 
-import { Button, ThemeButton } from "./Button";
+import { ThemeSwitcher } from "./ThemeSwitcher";
 
 import { ThemeDecorator } from "shared/config/storybook/ThemeDecorator/ThemeDecorator";
 import { Theme } from "app/providers/ThemeProvider";
 
 const meta = {
-  title: "shared/Button",
-  component: Button,
+  title: "widgets/ThemeSwitcher",
+  component: ThemeSwitcher,
   parameters: {
     layout: "centered",
   },
 
   tags: ["autodocs"],
 
-  args: { onClick: fn() },
-} satisfies Meta<typeof Button>;
+  args: {},
+} satisfies Meta<typeof ThemeSwitcher>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Primary: Story = {
-  args: {
-    children: "text",
-  },
+export const Normal: Story = {
+  args: {},
 };
-
-export const Clear: Story = {
-  args: {
-    children: "text",
-    theme: ThemeButton.CLEAR,
-  },
-};
-
-export const Outline: Story = {
-  args: {
-    children: "text",
-    theme: ThemeButton.OUTLINE,
-  },
+export const Dark: Story = {
+  args: {},
   decorators: [ThemeDecorator(Theme.DARK)],
 };

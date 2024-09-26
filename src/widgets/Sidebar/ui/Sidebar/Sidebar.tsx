@@ -4,9 +4,12 @@ import { useState } from "react";
 import { ThemeSwitcher } from "widgets/ThemeSwitcher";
 import { LangSwitcher } from "widgets/LangSwitcher";
 import { Button } from "shared";
+import React from "react";
 
 interface SidebarProps {
   className?: string;
+  children: React.ReactNode;
+  onClick?: () => void;
 }
 
 export const Sidebar: React.FC<SidebarProps> = (props) => {

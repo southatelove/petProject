@@ -2,9 +2,11 @@ import { classNames } from "shared/lib/classNames/classNames";
 import cls from "./PageError.module.scss";
 import { useTranslation } from "react-i18next";
 import { Button } from "shared";
+import React from "react";
 
 interface PageErrorProps {
   className?: string;
+  onClick?: () => void;
 }
 
 export const PageError: React.FC<PageErrorProps> = (props) => {
