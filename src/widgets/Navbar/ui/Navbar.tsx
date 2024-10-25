@@ -5,7 +5,7 @@ import { AppLink, AppLinkTheme } from "shared/ui/AppLink/AppLink";
 
 interface NavBarProps {
   className?: string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
   onClick?: () => void;
 }
 

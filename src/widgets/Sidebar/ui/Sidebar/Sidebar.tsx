@@ -8,7 +8,7 @@ import React from "react";
 
 interface SidebarProps {
   className?: string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
   onClick?: () => void;
 }
 

@@ -13,7 +13,7 @@ export const Loader: React.FC<LoaderProps> = (props) => {
     <div className={classNames("lds-ellipsis", {}, [className])}>
       <div className="loadingio-spinner-eclipse-nq4q5u6dq7r">
         <div className="ldio-x2uulkbinbj">
-          <div></div>
+          <div style={{ marginRight: "50px" }}></div>
         </div>
       </div>
     </div>
