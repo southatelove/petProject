@@ -6,6 +6,7 @@ import React from "react";
 
 export enum ButtonTheme {
   CLEAR = "clear",
+  CLEAR_INVERTED = "clear_inverted",
   OUTLINE = "outline",
   BACKGROUND = "background",
   BACKGROUND_INVERTED = "background_inverted",
@@ -19,7 +20,12 @@ export enum ButtonSize {
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
   className?: string;
-  theme?: "clear" | "outline" | "background" | "background_inverted"; // Проблема совместимости argTypes&typescript.Enum old versions
+  theme?:
+    | "clear"
+    | "outline"
+    | "background"
+    | "background_inverted"
+    | "clear_inverted"; // Проблема совместимости argTypes&typescript.Enum old versions
   square?: boolean;
   size?: "size_m" | "size_l" | "size_xl";
 }
