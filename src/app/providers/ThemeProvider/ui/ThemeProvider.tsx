@@ -26,6 +26,7 @@ const ThemeProvider: React.FC<ThemeProviderProps> = (props) => {
     }),
     [theme]
   );
+  document.body.className = theme;
 
   return (
     <ThemeContext.Provider value={defaultProps}>
