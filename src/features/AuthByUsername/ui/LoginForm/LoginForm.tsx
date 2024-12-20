@@ -3,6 +3,7 @@ import cls from "./LoginForm.module.scss";
 import { useTranslation } from "react-i18next";
 import { Button } from "shared";
 import { Input } from "shared/ui/Input/Input";
+import React from "react";
 
 interface LoginFormProps {
   className?: string;
