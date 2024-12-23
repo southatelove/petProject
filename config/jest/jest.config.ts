@@ -16,6 +16,7 @@ export default {
   // cacheDirectory: "C:\\Users\\tim\\AppData\\Local\\Temp\\jest",
 
   // Automatically clear mock calls, instances and results before every test
+  transformIgnorePatterns: ["node_modules/(?!axios)"],
   globals: { __IS_DEV__: true },
   clearMocks: true,
   testEnvironment: "jsdom",
