@@ -25,19 +25,15 @@ export function buildPlugins({
     // }),
   ];
 
-  plugins.push(
-    new BundleAnalyzerPlugin({
-      openAnalyzer: false,
-    })
-  );
-
   if (isDev) {
     plugins.push(
       // для того чтобы уйти от ререндера при изменений стилей и прочего
       new webpack.HotModuleReplacementPlugin()
-      // new BundleAnalyzerPlugin({
-      //   openAnalyzer: false,
-      // })
+    );
+    plugins.push(
+      new BundleAnalyzerPlugin({
+        openAnalyzer: false,
+      })
     );
   }
 
