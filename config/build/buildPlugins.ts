@@ -20,15 +20,24 @@ export function buildPlugins({
     new webpack.DefinePlugin({
       __IS_DEV__: JSON.stringify(true),
     }),
+    // new BundleAnalyzerPlugin({
+    //   openAnalyzer: true,
+    // }),
   ];
+
+  plugins.push(
+    new BundleAnalyzerPlugin({
+      openAnalyzer: false,
+    })
+  );
 
   if (isDev) {
     plugins.push(
       // для того чтобы уйти от ререндера при изменений стилей и прочего
-      new webpack.HotModuleReplacementPlugin(),
-      new BundleAnalyzerPlugin({
-        openAnalyzer: false,
-      })
+      new webpack.HotModuleReplacementPlugin()
+      // new BundleAnalyzerPlugin({
+      //   openAnalyzer: false,
+      // })
     );
   }
 

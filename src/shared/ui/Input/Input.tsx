@@ -52,7 +52,6 @@ export const Input: React.FC<InputProps> = memo((props) => {
     if (autoFocus) {
       setIsFocused(true);
       ref.current?.focus();
-      console.log("focus on input");
     }
   }, [autoFocus]);
 
