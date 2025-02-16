@@ -4,7 +4,7 @@ import { fn } from "@storybook/test";
 import AboutPage from "./AboutPage";
 
 const meta = {
-  title: "pages/PageError",
+  title: "pages/AboutPage",
   component: AboutPage,
   parameters: {
     layout: "centered",
