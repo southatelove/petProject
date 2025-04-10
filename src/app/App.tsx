@@ -9,7 +9,6 @@ import { userActions } from "entities/User";
 
 export default function App() {
   const { theme } = useTheme();
-
   const dispatch = useDispatch();
 
   useEffect(() => {
