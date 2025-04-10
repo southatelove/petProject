@@ -1,5 +1,4 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { fn } from "@storybook/test";
 
 import { Sidebar } from "./Sidebar";
 
@@ -15,21 +14,17 @@ const meta = {
 
   tags: ["autodocs"],
 
-  args: { onClick: fn() },
+  args: {},
 } satisfies Meta<typeof Sidebar>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Light: Story = {
-  args: {
-    children: "text",
-  },
+  args: {},
 };
 
 export const Dark: Story = {
-  args: {
-    children: "text",
-  },
+  args: {},
   decorators: [ThemeDecorator(Theme.DARK)],
 };

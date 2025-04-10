@@ -16,16 +16,14 @@ const meta = {
 
   tags: ["autodocs"],
 
-  args: { onClick: fn() },
+  args: {},
 } satisfies Meta<typeof Navbar>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Light: Story = {
-  args: {
-    children: "text",
-  },
+  args: {},
   decorators: [
     StoreDecorator({
       user: {
@@ -38,15 +36,11 @@ export const Light: Story = {
 };
 
 export const Dark: Story = {
-  args: {
-    children: "text",
-  },
+  args: {},
   decorators: [StoreDecorator({}), ThemeDecorator(Theme.DARK)],
 };
 export const AuthNavbar: Story = {
-  args: {
-    children: "text",
-  },
+  args: {},
   decorators: [
     StoreDecorator({
       user: {

@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from "react";
+import React, { memo, useCallback, useState } from "react";
 import cls from "./Navbar.module.scss";
 import { classNames } from "shared/lib/classNames/classNames";
 import { useTranslation } from "react-i18next";
@@ -10,11 +10,9 @@ import { getUserAuthData, userActions } from "entities/User";
 
 interface NavBarProps {
   className?: string;
-  children?: React.ReactNode;
-  onClick?: () => void;
 }
 
-export const Navbar = ({ className }: NavBarProps) => {
+export const Navbar = memo(({ className }: NavBarProps) => {
   const { t } = useTranslation();
 
   const dispatch = useDispatch();
@@ -61,4 +59,4 @@ export const Navbar = ({ className }: NavBarProps) => {
       )}
     </div>
   );
-};
+});
