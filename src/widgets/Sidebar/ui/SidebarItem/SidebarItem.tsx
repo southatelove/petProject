@@ -10,7 +10,7 @@ import { classNames } from "shared/lib/classNames/classNames";
 import React from "react";
 
 interface SidebarItemProps {
-  item?: SidebarItemType;
+  item: SidebarItemType;
   collapsed: boolean;
 }
 

@@ -25,5 +25,15 @@
       "password": "123"
     }
   ],
-  "profile": { "first": "sout", "lastname" : "xatelove", "age": 26, "currency": "RUB", "country": "Russia","city": "SPb", "username": "admin", "avatar": "https://i.ytimg.com/vi/stlwIenimI0/maxresdefault.jpg" }
+
+  "profile": {
+    "first": "sout",
+    "lastname": "xatelove",
+    "age": 26,
+    "currency": "RUB",
+    "country": "Russia",
+    "city": "SPb",
+    "username": "admin",
+    "avatar": "https://i.ytimg.com/vi/stlwIenimI0/maxresdefault.jpg"
+  }
 }

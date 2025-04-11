@@ -20,7 +20,7 @@ import { getLoginError } from "features/AuthByUsername/model/selectors/getLoginE
 import { getLoginPassword } from "features/AuthByUsername/model/selectors/getLoginPassword/getLoginPassword";
 import {
   DynamicModuleLoader,
-  ReducerList,
+  ReducersList,
 } from "shared/lib/components/DynamicModuleLoader/DynamicModuleLoader";
 import { useAppDispatch } from "shared/lib/hooks/useAppDispatch";
 
@@ -29,7 +29,7 @@ export interface LoginFormProps {
   onSuccess?: () => void;
 }
 
-const initialReducers: ReducerList = {
+const initialReducers: ReducersList = {
   loginForm: loginReducer,
 };
 
@@ -59,7 +59,7 @@ const LoginForm: React.FC<LoginFormProps> = memo((props) => {
   const onLoginClick = useCallback(async () => {
     const result = await dispatch(loginByUsername({ username, password }));
     if (result.meta.requestStatus === "fulfilled") {
-      onSuccess();
+      onSuccess?.();
     }
   }, [onSuccess, dispatch, username, password]);
 

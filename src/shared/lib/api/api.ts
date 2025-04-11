@@ -8,6 +8,6 @@ export const baseUrl = __IS_DEV__
 export const $api = axios.create({
   baseURL: baseUrl,
   headers: {
-    authorization: localStorage.getItem(USER_LOCALSTORAGE_KEY),
+    authorization: localStorage.getItem(USER_LOCALSTORAGE_KEY) || "",
   },
 });
