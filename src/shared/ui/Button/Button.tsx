@@ -8,6 +8,7 @@ export enum ButtonTheme {
   CLEAR = "clear",
   CLEAR_INVERTED = "clear_inverted",
   OUTLINE = "outline",
+  OUTLINE_RED = "outline_red",
   BACKGROUND = "background",
   BACKGROUND_INVERTED = "background_inverted",
 }
@@ -25,7 +26,8 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     | "outline"
     | "background"
     | "background_inverted"
-    | "clear_inverted"; // Проблема совместимости argTypes&typescript.Enum old versions
+    | "clear_inverted"
+    | "outline_red"; // Проблема совместимости argTypes&typescript.Enum old versions
   square?: boolean;
   size?: "size_m" | "size_l" | "size_xl";
   disabled?: boolean;

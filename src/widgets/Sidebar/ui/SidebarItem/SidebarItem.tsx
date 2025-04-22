@@ -8,6 +8,8 @@ import { memo } from "react";
 import { classNames } from "shared/lib/classNames/classNames";
 
 import React from "react";
+import { getUserAuthData } from "entities/User";
+import { useSelector } from "react-redux";
 
 interface SidebarItemProps {
   item: SidebarItemType;
@@ -16,6 +18,14 @@ interface SidebarItemProps {
 
 export const SidebarItem = memo(({ item, collapsed }: SidebarItemProps) => {
   const { t } = useTranslation();
+
+  const isAuth = useSelector(getUserAuthData);
+
+  console.log(isAuth, "isAuth");
+
+  if (item.authOnly && !isAuth) {
+    return null;
+  }
 
   return (
     <>
